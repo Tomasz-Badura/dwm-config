@@ -6,3 +6,5 @@ Custom dwm config with applied patches:
 - steam
 - status2d (with embedded systray)
 - changed modkey to windows key
+- alwayscenter
+- fakefullscreen
