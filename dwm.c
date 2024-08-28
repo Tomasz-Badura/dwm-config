@@ -585,10 +585,6 @@ void buttonpress(XEvent *e)
 				}
 			}
 		}
-		else
-		{
-			click = ClkWinTitle;
-		}
 		else if ((c = wintoclient(ev->window)))
 		{
 			focus(c);
@@ -596,6 +592,11 @@ void buttonpress(XEvent *e)
 			XAllowEvents(dpy, ReplayPointer, CurrentTime);
 			click = ClkClientWin;
 		}
+		else
+		{
+			click = ClkWinTitle;
+		}
+		
 		for (i = 0; i < LENGTH(buttons); i++)
 			if (click == buttons[i].click && buttons[i].func && buttons[i].button == ev->button && CLEANMASK(buttons[i].mask) == CLEANMASK(ev->state))
 				buttons[i].func(click == ClkTagBar && buttons[i].arg.i == 0 ? &arg : &buttons[i].arg);
@@ -921,7 +922,7 @@ Monitor *dirtomon(int dir)
 
 int drawstatusbar(Monitor * m, int bh, char *stext)
 {
-	int ret, i, w, x, len;
+	int ret, i, w, x, len, j;
 	short isCode = 0;
 	char *text;
 	char *p;
