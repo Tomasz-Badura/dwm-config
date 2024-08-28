@@ -1,4 +1,5 @@
 original source: https://dwm.suckless.org/
+
 dwmblocks: https://github.com/Tomasz-Badura/dwmblocks-config/
 
 Custom dwm config with applied patches:
