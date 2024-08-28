@@ -10,13 +10,13 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Ubuntu Mono derivative Powerline:size=12", "Font Awesome 6 Free:size=12" };
-static const char dmenufont[]       = "Ubuntu Mono derivative Powerline:size=12";
-static const char col_gray1[]       = "#0B0E10";
-static const char col_gray2[]       = "#3A4444";
-static const char col_gray3[]       = "#4C4D4D";
-static const char col_gray4[]       = "#394142";
-static const char col_cyan[]        = "#000000";
+static const char *fonts[]          = { "Ubuntu Mono derivative Powerline:size=11", "Font Awesome 6 Free:size=10" };
+static const char dmenufont[]       = "Ubuntu Mono derivative Powerline:size=11";
+static const char col_gray1[]       = "#FFFFFF";
+static const char col_gray2[]       = "#FFFFFF";
+static const char col_gray3[]       = "#000000";
+static const char col_gray4[]       = "#000000";
+static const char col_cyan[]        = "#FFB6FC";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
