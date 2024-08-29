@@ -33,8 +33,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   focusopacity    unfocusopacity     monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           1.0,            inactiveopacity,   -1 },
+	/* class      			instance    title       tags mask	isfloating   focusopacity    unfocusopacity		monitor */
+	{ "microsoft-edge",     NULL,       NULL,       0,			0,           1.0,            1.0,   			-1 },
 };
 
 /* layout(s) */
