@@ -42,10 +42,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
-	{ "[T]",      tile },
+	/* symbol     arrange function */
+	{ "[T]",      tile },    /* first entry is default */
+	{ "~",      NULL },    /* no layout function means floating behavior */
 	{ "[-]",      monocle },
-	{ "[M]",      centeredmaster },
-	{ "{M}",      centeredfloatingmaster },
 };
 
 /* key definitions */
@@ -83,7 +83,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
