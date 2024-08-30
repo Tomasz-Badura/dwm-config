@@ -74,7 +74,7 @@ static const Key keys[] = {
 	/* modifier                     key        	function        		argument */
 	{ MODKEY,                       XK_q,      	spawn,          		{.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_q, 	   	spawn,          		{.v = termcmd } },
-	{ MODKEY,                       XK_b,      	togglebar,      		{0} },
+	{ MODKEY|ShiftMask,             XK_Tab,     togglebar,      		{0} },
 	{ MODKEY,                       XK_m,      	incnmaster,     		{.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_m,      	incnmaster,     		{.i = -1 } },
 	{ MODKEY,                       XK_n,      	setmfact,       		{.f = +0.05} },
