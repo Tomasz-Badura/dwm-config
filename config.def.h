@@ -49,7 +49,6 @@ static const int lockfullscreen = 0; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[T]",      	tile },    /* first entry is default */
-	{ "~",      	NULL },    /* no layout function means floating behavior */
 	{ "[-]",      	monocle },
 };
 
@@ -77,31 +76,30 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q, 	   	spawn,          		{.v = termcmd } },
 	{ MODKEY,                       XK_b,      	togglebar,      		{0} },
 	{ MODKEY,                       XK_m,      	incnmaster,     		{.i = +1 } },
-	{ MODKEY,                       XK_n,      	incnmaster,     		{.i = -1 } },
-	{ MODKEY,                       XK_j,      	setmfact,       		{.f = -0.05} },
-	{ MODKEY,                       XK_k,      	setmfact,       		{.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_m,      	incnmaster,     		{.i = -1 } },
+	{ MODKEY,                       XK_n,      	setmfact,       		{.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_n,      	setmfact,       		{.f = -0.05} },
 	{ MODKEY,                       XK_a, 	   	zoom,           		{0} },
 	{ MODKEY,                       XK_Tab,    	view,           		{0} },
 	{ MODKEY|ShiftMask,             XK_c,      	killclient,     		{0} },
-	{ MODKEY,                       XK_r,      	setlayout,      		{.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      	setlayout,      		{.v = &layouts[1]} },
-	{ MODKEY,                       XK_v,      	setlayout,      		{.v = &layouts[2]} },
+	{ MODKEY,                       XK_z,      	setlayout,      		{.v = &layouts[0]} },
+	{ MODKEY,                       XK_x,      	setlayout,      		{.v = &layouts[1]} },
 	{ MODKEY,                       XK_space,  	setlayout,      		{0} },
 	{ MODKEY|ShiftMask,             XK_space,  	togglefloating, 		{0} },
 	{ MODKEY,                       XK_0,      	view,           		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      	tag,            		{.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  	focusmon,       		{.i = -1 } },
-	{ MODKEY,                       XK_period, 	focusmon,       		{.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  	tagmon,         		{.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, 	tagmon,         		{.i = +1 } },
+	{ MODKEY,                       XK_comma, 	focusmon,       		{.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,  	focusmon,       		{.i = -1 } },
+	{ MODKEY,             			XK_period, 	tagmon,         		{.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_period, 	tagmon,         		{.i = -1 } },
 	{ MODKEY,                       XK_d,  	   	viewnext,       		{0} },
 	{ MODKEY,                       XK_s,      	viewprev,       		{0} },
 	{ MODKEY|ShiftMask,             XK_d,  		tagtonext,      		{0} },
 	{ MODKEY|ShiftMask,             XK_s,   	tagtoprev,      		{0} },
-	{ MODKEY|ShiftMask,             XK_i,      	changefocusopacity,   	{.f = +0.05}},
-	{ MODKEY|ShiftMask,             XK_u,      	changefocusopacity,   	{.f = -0.05}},
-	{ MODKEY|ShiftMask,             XK_y,      	changeunfocusopacity, 	{.f = +0.05}},
-	{ MODKEY|ShiftMask,             XK_t,      	changeunfocusopacity, 	{.f = -0.05}},
+	{ MODKEY,             			XK_b,      	changefocusopacity,   	{.f = +0.05}},
+	{ MODKEY,         			    XK_v,      	changefocusopacity,   	{.f = -0.05}},
+	{ MODKEY|ShiftMask,			    XK_b,      	changeunfocusopacity, 	{.f = +0.05}},
+	{ MODKEY|ShiftMask,             XK_v,      	changeunfocusopacity, 	{.f = -0.05}},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -111,7 +109,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_p,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_o,      quit,           {0} },
 };
 
 /* button definitions */
