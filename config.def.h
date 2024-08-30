@@ -29,13 +29,15 @@ static const char *colors[][3]      = {
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
-	/* xprop(1):
+	/* xprop(1):p
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      			instance    		title       tags mask	isfloating   focusopacity    unfocusopacity		monitor */
 { 	"Microsoft-edge",     	"microsoft-edge",   NULL,       0,			0,           1.0,            1.0,   			-1 },
 { 	"feh",     				"feh",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
+{ 	"Gimp",     			"gimp",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
+{ 	"Code",     			"code",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
 };
 
 /* layout(s) */
