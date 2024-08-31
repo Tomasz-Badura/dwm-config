@@ -38,6 +38,9 @@ static const Rule rules[] = {
 { 	"feh",     				"feh",   			NULL,       0,			0,           1.0,            inactiveopacity,   -1 },
 { 	"Gimp",     			"gimp",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
 { 	"Code",     			"code",   			NULL,       0,			0,           1.0,            inactiveopacity,   -1 },
+{ 	"mpv",     				"mpv",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
+{ 	"Google-chrome",     	"google-chrome",   	NULL,       0,			0,           1.0,            1.0,   			-1 },
+{ 	"kdenlive",     		"kdenlive",   		NULL,       0,			0,           1.0,            1.0,   			-1 },
 };
 
 /* layout(s) */
