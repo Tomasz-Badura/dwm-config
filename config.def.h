@@ -33,14 +33,15 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      			instance    		title       tags mask	isfloating   focusopacity    unfocusopacity		monitor */
-{ 	"Microsoft-edge",     	"microsoft-edge",   NULL,       0,			0,           1.0,            1.0,   			-1 },
-{ 	"feh",     				"feh",   			NULL,       0,			0,           1.0,            inactiveopacity,   -1 },
-{ 	"Gimp",     			"gimp",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
-{ 	"Code",     			"code",   			NULL,       0,			0,           1.0,            inactiveopacity,   -1 },
-{ 	"mpv",     				"mpv",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
-{ 	"Google-chrome",     	"google-chrome",   	NULL,       0,			0,           1.0,            1.0,   			-1 },
-{ 	"kdenlive",     		"kdenlive",   		NULL,       0,			0,           1.0,            1.0,   			-1 },
+	/* 	class      							instance    					title       tags mask	isfloating   focusopacity    unfocusopacity		monitor */
+	{ 	"Microsoft-edge",     				"microsoft-edge",   			NULL,       0,			0,           1.0,            1.0,   			-1 },
+	{ 	"feh",     							"feh",   						NULL,       0,			0,           1.0,            inactiveopacity,   -1 },
+	{ 	"Gimp",     						"gimp",   						NULL,       0,			0,           1.0,            1.0,   			-1 },
+	{ 	"Code",     						"code",   						NULL,       0,			0,           1.0,            inactiveopacity,   -1 },
+	{ 	"mpv",     							"mpv",   						NULL,       0,			0,           1.0,            1.0,   			-1 },
+	{ 	"Google-chrome",     				"google-chrome",   				NULL,       0,			0,           1.0,            1.0,   			-1 },
+	{ 	"kdenlive",     					"kdenlive",   					NULL,       0,			0,           1.0,            1.0,   			-1 },
+	{ 	".microsoft-edge-wrapped",     		".microsoft-edge-wrapped",   	NULL,       0,			1,           1.0,            1.0,   			-1 },
 };
 
 /* layout(s) */
